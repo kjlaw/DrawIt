@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
+    <entity name="Drawing" representedClassName=".Drawing" syncable="YES">
+        <attribute name="blur" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="paths" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Path" inverseName="drawing" inverseEntity="Path" syncable="YES"/>
+    </entity>
+    <entity name="Path" representedClassName=".Path" syncable="YES">
+        <attribute name="bezier" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="color" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="index" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="drawing" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Drawing" inverseName="paths" inverseEntity="Drawing" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Drawing" positionX="-324" positionY="-18" width="128" height="118"/>
+        <element name="Path" positionX="-63" positionY="9" width="128" height="103"/>
+    </elements>
+</model>
